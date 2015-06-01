@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+        xmlns:p="http://primefaces.org/ui">
+
+<ui:composition template="/templates/master.xhtml">
+    <ui:define name="pageTitle">Novo usuário</ui:define>
+
+    <ui:define name="content">
+        <div class="panel panel-default clearfix" id="layout-dashboard">
+            <h3>Novo usuário</h3>
+            <h:form id="form-user" styleClass="form-horizontal">
+                <div class="form-group">
+                    <p:outputLabel for="name" value="Nome:" styleClass="control-label col-md-2" />
+                    <div class="col-md-10">
+                        <p:inputText placeholder="Nome do usuário" id="name" value="#{userMB.user.name}" styleClass="form-control"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <p:outputLabel for="email" value="Email:" styleClass="control-label col-md-2" />
+                    <div class="col-md-4">
+                        <p:inputText placeholder="Insira email válido" id="email" value="#{userMB.user.email}" styleClass="form-control"/>
+                    </div>
+                    <p:outputLabel for="phone" value="Telefone:" styleClass="control-label col-md-2" />
+                    <div class="col-md-4">
+                        <p:inputText placeholder="Fixo ou celular" id="phone" value="#{userMB.user.phone}" styleClass="form-control"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <p:outputLabel for="username" value="Nome de usuário:" styleClass="control-label col-md-2" />
+                    <div class="col-md-4">
+                        <p:inputText placeholder="Nome entre 4 e 20 caracteres" id="username" value="#{userMB.user.username}" styleClass="form-control"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <p:outputLabel for="password" value="Senha:" styleClass="control-label col-md-2" />
+                    <div class="col-md-4">
+                        <p:password match="password_confirmation" placeholder="Senha entre 4 e 20 caracteres" id="password" value="#{userMB.user.password}" styleClass="form-control"/>
+                    </div>
+                    <p:outputLabel for="password_confirmation" value="Confirma senha:" styleClass="control-label col-md-2" />
+                    <div class="col-md-4">
+                        <p:password placeholder="Igual ao campo senha" id="password_confirmation" styleClass="form-control"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <p:outputLabel for="passwordTip" value="Dica de Senha:" styleClass="control-label col-md-2" />
+                    <div class="col-md-4">
+                        <p:inputText placeholder="Dica para lembrar sua senha" id="passwordTip" value="#{userMB.user.passwordTip}" styleClass="form-control"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <p:outputLabel for="details" value="Observações:" styleClass="control-label col-md-2" />
+                    <div class="col-md-10">
+                        <p:inputTextarea id="details" value="#{userMB.user.details}" styleClass="form-control"/>
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <p:commandButton styleClass="btn btn-primary pull-right" actionListener="#{userMB.createUser}" value="Cadastrar" />
+                </div>
+            </h:form>
+        </div>
+    </ui:define>
+
+</ui:composition>
+
+</html>

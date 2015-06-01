@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+        <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="Rogerio Ferracin" />
+    <link rel="shortcut icon" type="image/x-icon"
+          href="resources/images/favicon.ico" />
+
+    <title><ui:insert name="pageTitle">Grafix Sistema</ui:insert> </title>
+
+    <h:outputStylesheet library="plugins" name="bootstrap/css/bootstrap.min.css" />
+    <h:outputStylesheet library="css" name="font-icon-layout.css" />
+    <h:outputStylesheet library="css" name="app-layout.css" />
+
+    <h:outputScript library="plugins" name="jquery/jquery.min.js" />
+    <h:outputScript library="plugins" name="bootstrap/js/bootstrap.min.js" />
+</h:head>
+
+<h:body>
+    <h:form>
+        <p:growl id="messages" autoUpdate="true" />
+    </h:form>
+    <div class="container-fluid">
+        <div class="row" id="layout-north">
+            <div class="col-md-2">
+                <h:graphicImage library="images" name="logoGrafix-h-white.svg" styleClass="brand" alt="Grafix logo" />
+            </div>
+            <div class="col-md-10">
+                <!-- USER ACTIVE DETAILS -->
+                <div class="pull-right" id="user-info">
+                    <a href="#">
+                        <div class="user-picture">
+                            <h:graphicImage library="images" name="no-picture.svg" alt="Avatar usuário ativo" />
+                        </div>
+                        <div class="user-active-name">
+                            <span class="user-welcome">Bem vindo!</span>
+                            <span class="user-name">Administrador</span>
+                        </div>
+                    </a>
+                </div>
+                <!-- MESSAGES FROM SYSTEM -->
+                <div class="pull-right" id="system-messages">
+                    <ul class="menu-system-messages-container">
+                        <li><a href="#"><i class="icon-warning"></i><span class="badge">3</span> </a></li>
+                        <li><a href="#"><i class="icon-cog"></i><span class="badge">8</span> </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- MIDDLE -->
+        <div class="row" id="layout-middle">
+
+            <!-- WEST -->
+            <div class="col-md-2" id="layout-west">
+                <ui:include src="/templates/sidemenu.xhtml" />
+            </div>
+
+            <!-- CENTER -->
+            <div class="col-md-8" id="layout-center">
+                <ui:insert name="content">
+                    <div class="panel panel-default clearfix" id="layout-dashboard">
+                        <img src="images/logoGrafix-h.svg" alt="" style="height: 80px" />
+                        <h1>Bem vindo ao sistema Grafix!</h1>
+                    </div>
+                </ui:insert>
+            </div>
+
+            <!-- EAST -->
+            <div class="col-md-2" id="layout-east">
+                <div class="em_options"><h:graphicImage library="images" name="LogoGrafix.svg" alt="Grafix logo" /> Opções</div>
+                <ul class="east-menu-container">
+                    <li><a href="#"><i class="icon-list"></i> Lista</a> </li>
+                    <li><a href="#"><i class="icon-plus"></i> Novo</a> </li>
+                    <li><a href="#"><i class="icon-folder-open"></i> Ficha</a> </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row" id="layout-south">
+            <div class="col-md-2">
+                <h:graphicImage library="images" name="logoGrafix-gray.svg" styleClass="brand" alt="Grafix logo" />
+            </div>
+        </div>
+    </div>
+
+
+</h:body>
+</html>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW X7 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="10mm" height="10mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 1000 1000"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <font id="FontID0" horiz-adv-x="659" font-variant="normal" class="str0" style="fill-rule:nonzero" font-weight="400">
+	<font-face 
+		font-family="Berlin Sans FB">
+	</font-face>
+   <missing-glyph><path d="M0 0z"/></missing-glyph>
+   <glyph unicode="?" horiz-adv-x="397"><path d="M376.998 498.002c0,-47.1739 -13.9928,-89.0046 -41.998,-125.502 -3.67039,-4.1624 -30.3373,-30.8293 -80.1681,-80.0008 -30.0028,-28.9991 -46.1604,-57.4963 -48.827,-85.5015 -0.669133,-7.16366 -1.33827,-14.3273 -2.0074,-21.5008 -1.32843,-5.50067 -5.99268,-9.66307 -14.16,-12.6643 -9.33835,-3.16854 -16.6693,-4.83154 -21.8354,-4.83154 -16.6693,0 -26.3324,0.50185 -29.3336,1.49571 -7.8328,2.83398 -11.6705,10.6668 -11.6705,23.3311 0,39.1738 6.67165,70.1704 20.0051,93.3343 21.5008,28.0052 42.8344,56.1678 64.0006,84.3403 25.3287,33.9979 37.993,66.3328 37.993,97.1621 0,30.3373 -8.65937,54.8394 -26.1651,73.5063 -17.3286,18.4996 -41.1615,27.8281 -70.997,27.8281 -24.1675,0 -51.0017,-8.50193 -80.5026,-25.4959 -29.3336,-17.0039 -43.4937,-25.5058 -42.1652,-25.5058 -10.1649,0 -15.1637,31.3312 -15.1637,93.8361 0,4.66425 4.83154,10.3322 14.6619,17.1613 51.169,35.3361 104.837,53.0091 161.173,53.0091 55.1641,0 99.9961,-17.0039 134.83,-50.8344 34.8343,-33.8404 52.3302,-78.1705 52.3302,-133.167zm-138.993 -442.838c0,-18.165 -6.00252,-33.9979 -18.0076,-47.6659 -12.1625,-13.668 -27.0015,-20.4971 -44.9992,-20.4971 -17.4959,0 -32.3349,6.8291 -44.1628,20.4971 -11.8378,13.668 -17.8304,29.5009 -17.8304,47.6659 0,18.3323 5.8254,33.9979 17.4959,47.1739 11.8279,13.1662 26.6669,19.6607 44.4974,19.6607 18.165,0 33.3386,-6.49453 45.1665,-19.6607 11.8378,-13.176 17.8403,-28.8416 17.8403,-47.1739z"/></glyph>
+  </font>
+  <style type="text/css">
+   <![CDATA[
+    @font-face { font-family:"Berlin Sans FB";src:url("#FontID0") format(svg)}
+    .str0 {stroke-width:7.5}
+    .str1 {stroke:#848688;stroke-width:7.62}
+    .fil2 {fill:#A9ABAE}
+    .fil1 {fill:#848688}
+    .fil0 {fill:url(#id0)}
+    .fnt0 {font-weight:normal;font-size:1016.24px;font-family:'Berlin Sans FB'}
+   ]]>
+  </style>
+  <radialGradient id="id0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1 -0 -0 1 0 0)" cx="500" cy="500" r="1677.5" fx="500" fy="500">
+   <stop offset="0" style="stop-opacity:1; stop-color:#FEFEFE"/>
+   <stop offset="1" style="stop-opacity:1; stop-color:#A9ABAE"/>
+  </radialGradient>
+ </defs>
+ <g id="Camada_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <rect class="fil0" width="1000" height="1000"/>
+  <text x="318" y="829"  class="fil1 str1 fnt0">?</text>
+  <text x="301" y="840"  class="fil2 str1 fnt0">?</text>
+ </g>
+</svg>
