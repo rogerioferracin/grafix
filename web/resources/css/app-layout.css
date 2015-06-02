@@ -70,10 +70,15 @@ a:hover {
     transition: all 0.5s ease;
 }
 
+/* PRIMEFACES */
 .ui-widget,
 .ui-widget .ui-widget {
     font-size: 14px !important;
     font-family: 'titillium_webregular', sans-serif!important;
+}
+
+.ui-message-error {
+    margin-top: 5px!important;
 }
 
 /* HEADER */

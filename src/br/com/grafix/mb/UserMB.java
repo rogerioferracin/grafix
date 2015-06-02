@@ -1,12 +1,14 @@
 package br.com.grafix.mb;
 
 import br.com.grafix.dao.UserDAO;
+import br.com.grafix.helper.JSFMessagesHelper;
+import br.com.grafix.helper.LoggerUtil;
 import br.com.grafix.model.User;
 
 import javax.ejb.EJB;
 import javax.ejb.EJBException;
 import javax.faces.bean.ManagedBean;
-import javax.faces.bean.ViewScoped;
+import javax.faces.bean.RequestScoped;
 import java.util.List;
 
 /**
@@ -14,10 +16,11 @@ import java.util.List;
  * Created by Rogerio Ferracin on 01/06/2015.
  */
 @ManagedBean
-@ViewScoped
-public class UserMB {
+@RequestScoped
+public class UserMB extends AbstractMB{
 
     private static final String CREATE_USER = "createUser";
+    private static final String UPDATE_USER = "updateUser";
     private static final String LIST_USERS = "listUsers";
     private static final String STAY_IN_SAME_PAGE = null;
 
@@ -32,11 +35,21 @@ public class UserMB {
         try {
             dao.save(user);
         } catch (EJBException e) {
-            e.printStackTrace();
+            LoggerUtil.logErrorData("Ocorreu um erro ao persistir o objeto: ", e);
+            JSFMessagesHelper.sendErrorMessageToUser("Ocorreu um erro ao persistir o usuário. Tente novamente");
             return STAY_IN_SAME_PAGE;
         }
-        return "listUsers";
+        JSFMessagesHelper.sendInfoMessageToUser("Usuario cadastrado com sucesso.");
+        return LIST_USERS;
     }
+
+    //Navigation
+    public String navListUsers(){ return LIST_USERS; }
+    public String navCreateUser(){
+        JSFMessagesHelper.sendInfoMessageToUser("Somente testando!");
+        return CREATE_USER;
+    }
+    public String navUpdateUser(){ return UPDATE_USER; }
 
     //Getters & Setters
     public User getUser() {

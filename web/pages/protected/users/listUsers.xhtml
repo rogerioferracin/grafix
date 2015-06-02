@@ -16,6 +16,7 @@
             <h:form id="form-user">
                 <p:dataTable var="user" value="#{userMB.users}" styleClass="table table-striped"
                         emptyMessage="Nenhum item cadastrado">
+                    <h:inputHidden value="#{user.id}" />
                     <p:column headerText="Nome"><h:outputText value="#{user.name}" /></p:column>
                     <p:column headerText="Usuário"><h:outputText value="#{user.username}" /></p:column>
                     <p:column headerText="Email"><h:outputText value="#{user.email}" /></p:column>
@@ -24,11 +25,17 @@
                         <f:facet name="header">
                             <i class="icon-wrench"></i>
                         </f:facet>
-                        <a href="#"><i class="icon-folder-open"></i> </a>
+                        <p:commandButton icon="icon-folder-open" action="#{userMB.navUpdateUser}" value="Ok">
+                            <f:setPropertyActionListener value="#{user}" target="#{userMB.user}" />
+                        </p:commandButton>
                     </p:column>
                 </p:dataTable>
             </h:form>
         </div>
+    </ui:define>
+
+    <ui:define name="menu-side">
+        <ui:include src="menuUsers.xhtml" />
     </ui:define>
 
 </ui:composition>

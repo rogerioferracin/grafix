@@ -10,6 +10,7 @@
         <navigation-case>
             <from-outcome>home</from-outcome>
             <to-view-id>/pages/public/welcome.xhtml</to-view-id>
+            <redirect />
         </navigation-case>
         <navigation-case>
             <from-outcome>createUser</from-outcome>
@@ -19,6 +20,11 @@
         <navigation-case>
             <from-outcome>listUsers</from-outcome>
             <to-view-id>/pages/protected/users/listUsers.xhtml</to-view-id>
+            <redirect />
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>updateUser</from-outcome>
+            <to-view-id>/pages/protected/users/updateUser.xhtml</to-view-id>
             <redirect />
         </navigation-case>
     </navigation-rule>

@@ -6,7 +6,9 @@
     <!-- MENU SIDEBAR -->
     <h:form id="form-sidebar">
         <ul class="sidebar-menu-container" id="sm_accordion">
-            <li><a href="#" class="active">Home <span class="icon-home"></span> </a> </li>
+            <li>
+                <h:link outcome="home"> Home <span class="icon-home"></span> </h:link>
+            </li>
             <li>
                 <a href="#" data-toggle="collapse" data-target="#sm_cadastros" data-parent="#sm_accordion">
                     Cadastros <span class="icon-leaf"></span>
@@ -17,10 +19,10 @@
                         <a href="#" data-toggle="collapse" data-target="#sm_users" data-parent="#sm_cadastros">Usuários <span class="icon-users"></span> </a>
                         <ul class="collapse sidebar-submenu-container" id="sm_users">
                             <li>
-                                <p:link outcome="listUsers" >Lista <span class="icon-list"></span></p:link>
+                                <h:commandLink action="#{userMB.navListUsers}" >Lista <span class="icon-list"></span></h:commandLink>
                             </li>
                             <li>
-                                <p:link outcome="createUser" >Novo <span class="icon-plus"></span></p:link>
+                                <h:commandLink action="#{userMB.navCreateUser}" >Novo <span class="icon-plus"></span></h:commandLink>
                             </li>
                         </ul>
                     </li>

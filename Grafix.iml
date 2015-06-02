@@ -62,5 +62,6 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" scope="PROVIDED" name="JBoss 8.2.0.Final - Bean Validation" level="application_server_libraries" />
   </component>
 </module>
