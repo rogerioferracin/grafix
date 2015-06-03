@@ -4,16 +4,17 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
         xmlns:p="http://primefaces.org/ui">
 
 <ui:composition template="/templates/master.xhtml">
-    <ui:define name="pageTitle">Novo usuário</ui:define>
+    <ui:define name="pageTitle">Atualiza usuário</ui:define>
 
     <ui:define name="content">
         <div class="panel panel-default clearfix" id="layout-dashboard">
-            <h3>Novo usuário</h3>
+            <h3>Atualiza usuário</h3>
             <h:form id="form-user" styleClass="form-horizontal">
-                <p:inputText type="hidden" id="userId"  />
+                <h:inputHidden value="#{userMB.user.id}" />
                 <div class="form-group">
                     <p:outputLabel for="name" value="Nome:" styleClass="control-label col-md-2" />
                     <div class="col-md-10">
@@ -39,16 +40,12 @@
                         <p:inputText placeholder="Nome entre 4 e 20 caracteres" id="username" value="#{userMB.user.username}" styleClass="form-control"/>
                         <p:message for="username" />
                     </div>
-                </div>
+                    <p:outputLabel for="role" value="Função:" styleClass="control-label col-md-2" />
+                    <div class="col-md-4">
+                        <p:selectOneMenu id="role" value="#{userMB.user.role}">
+                            <f:selectItems value="#{userMB.roles}" />
+                        </p:selectOneMenu>
 
-                <div class="form-group">
-                    <p:outputLabel for="password" value="Senha:" styleClass="control-label col-md-2" />
-                    <div class="col-md-4">
-                        <p:password match="password_confirmation" placeholder="Senha entre 4 e 20 caracteres" id="password" value="#{userMB.user.password}" styleClass="form-control"/>
-                    </div>
-                    <p:outputLabel for="password_confirmation" value="Confirma senha:" styleClass="control-label col-md-2" />
-                    <div class="col-md-4">
-                        <p:password placeholder="Igual ao campo senha" id="password_confirmation" styleClass="form-control"/>
                     </div>
                 </div>
 
@@ -66,7 +63,7 @@
                     </div>
                 </div>
                 <div class="clearfix">
-                    <p:commandButton styleClass="btn btn-primary pull-right" action="#{userMB.createUser}" value="Cadastrar" update="@form" />
+                    <p:commandButton styleClass="btn btn-primary pull-right" action="#{userMB.updateUser}" value="Atualizar" update="@form" />
                 </div>
             </h:form>
         </div>

@@ -18,10 +18,10 @@ public abstract class AbstractModel implements Serializable {
     private Integer id;
     private boolean active;
     @Temporal(TemporalType.TIMESTAMP)
-    @Column(name = "created", nullable = false)
+    @Column(name = "created")
     private Date created;
     @Temporal(TemporalType.TIMESTAMP)
-    @Column(name = "updated", nullable = false)
+    @Column(name = "updated")
     private Date updated;
 
     //Getters & setters

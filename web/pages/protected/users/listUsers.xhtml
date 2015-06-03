@@ -19,15 +19,19 @@
                     <h:inputHidden value="#{user.id}" />
                     <p:column headerText="Nome"><h:outputText value="#{user.name}" /></p:column>
                     <p:column headerText="Usuário"><h:outputText value="#{user.username}" /></p:column>
+                    <p:column headerText="Função"><h:outputText value="#{user.roleValue}" /></p:column>
                     <p:column headerText="Email"><h:outputText value="#{user.email}" /></p:column>
                     <p:column headerText="Telefone"><h:outputText value="#{user.phone}" /></p:column>
                     <p:column style="width: 5%">
                         <f:facet name="header">
                             <i class="icon-wrench"></i>
                         </f:facet>
-                        <p:commandButton icon="icon-folder-open" action="#{userMB.navUpdateUser}" value="Ok">
+
+                        <p:commandLink action="#{userMB.navUpdateUser}" >
                             <f:setPropertyActionListener value="#{user}" target="#{userMB.user}" />
-                        </p:commandButton>
+                            <i class="icon-folder-open"></i>
+                        </p:commandLink>
+
                     </p:column>
                 </p:dataTable>
             </h:form>

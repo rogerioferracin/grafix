@@ -4,6 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
         xmlns:p="http://primefaces.org/ui">
 
 <ui:composition template="/templates/master.xhtml">
@@ -38,12 +39,20 @@
                         <p:inputText placeholder="Nome entre 4 e 20 caracteres" id="username" value="#{userMB.user.username}" styleClass="form-control"/>
                         <p:message for="username" />
                     </div>
+                    <p:outputLabel for="role" value="Função:" styleClass="control-label col-md-2" />
+                    <div class="col-md-4">
+                        <p:selectOneMenu id="role" value="#{userMB.user.role}">
+                            <f:selectItems value="#{userMB.roles}" />
+                        </p:selectOneMenu>
+
+                    </div>
                 </div>
 
                 <div class="form-group">
                     <p:outputLabel for="password" value="Senha:" styleClass="control-label col-md-2" />
                     <div class="col-md-4">
                         <p:password match="password_confirmation" placeholder="Senha entre 4 e 20 caracteres" id="password" value="#{userMB.user.password}" styleClass="form-control"/>
+                        <p:message for="password" />
                     </div>
                     <p:outputLabel for="password_confirmation" value="Confirma senha:" styleClass="control-label col-md-2" />
                     <div class="col-md-4">
